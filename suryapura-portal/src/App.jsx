@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Leaf, GraduationCap, Tractor, Map, Phone, ShieldCheck, FileText, ChevronRight, Menu, Globe, X, HeartHandshake, AlertCircle, Briefcase, Users, PhoneCall, Quote } from 'lucide-react';
 
-// --- Subpage Components ---
+
 const BackButton = ({ onClick, lang }) => (
   <button className="back-btn" onClick={onClick}>
     <ChevronRight size={20} style={{ transform: 'rotate(180deg)' }} />
@@ -136,8 +136,9 @@ const EpanchayatPage = ({ lang, setActivePage }) => (
   </div>
 );
 
-// --- Main App Component ---
+
 function App() {
+  const base = import.meta.env.BASE_URL;
   const [lang, setLang] = useState('hi');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeModal, setActiveModal] = useState(null);
@@ -145,17 +146,17 @@ function App() {
   const [fontSize, setFontSize] = useState(100);
   const [theme, setTheme] = useState('light');
 
-  // Scroll to top on page change
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [activePage]);
 
-  // Apply Font Size
+
   useEffect(() => {
     document.documentElement.style.fontSize = `${fontSize}%`;
   }, [fontSize]);
 
-  // Apply Theme
+
   useEffect(() => {
     if (theme === 'high-contrast') {
       document.body.classList.add('high-contrast');
@@ -302,7 +303,7 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* --- Authentic Government Top Bar --- */}
+
       <div className="gov-topbar">
         <div className="gov-topbar-content">
           <div className="gov-left">
@@ -328,7 +329,7 @@ function App() {
         </div>
       </div>
 
-      {/* Latest News Marquee */}
+
       <div className="news-ticker">
         <div className="ticker-title">{lang === 'hi' ? 'नवीनतम सूचना' : 'Latest News'}</div>
         <div className="ticker-content">
@@ -386,7 +387,7 @@ function App() {
         </div>
       </nav>
 
-      {/* --- Page Routing Logic --- */}
+
       <main id="main-content">
         {activePage === 'certificates' && <CertificatesPage lang={lang} setActivePage={setActivePage} />}
         {activePage === 'grievances' && <GrievancesPage lang={lang} setActivePage={setActivePage} />}
@@ -396,7 +397,7 @@ function App() {
         {activePage === 'home' && (
         <>
           <section id="about" className="hero">
-            <img src="/hero_banner.png" alt="Suryapura Village Hero" className="hero-background" />
+            <img src={`${base}hero_banner.png`} alt="Suryapura Village Hero" className="hero-background" />
             <div className="hero-overlay"></div>
             <div className="hero-content">
               <div className="hero-badge">{t.heroBadge}</div>
@@ -535,7 +536,7 @@ function App() {
               </div>
               <div className="digital-image-wrapper">
                 <div className="digital-image-container">
-                  <img src="/social_digital.png" alt="Digital Identity" className="digital-image" />
+                  <img src={`${base}social_digital.png`} alt="Digital Identity" className="digital-image" />
                 </div>
               </div>
             </div>
@@ -559,7 +560,7 @@ function App() {
                     <span>{t.post1.time}</span>
                   </div>
                 </div>
-                <img src="/social_digital.png" alt="Farmer using tablet" className="post-image" />
+                <img src={`${base}social_digital.png`} alt="Farmer using tablet" className="post-image" />
                 <div className="post-content">
                   <p className="post-text">{t.post1.text}</p>
                   <span className="post-hashtags">{t.post1.tags}</span>
@@ -577,7 +578,7 @@ function App() {
                     <span>{t.post2.time}</span>
                   </div>
                 </div>
-                <img src="/social_education.png" alt="Children going to school" className="post-image" />
+                <img src={`${base}social_education.png`} alt="Children going to school" className="post-image" />
                 <div className="post-content">
                   <p className="post-text">{t.post2.text}</p>
                   <span className="post-hashtags">{t.post2.tags}</span>
@@ -638,7 +639,7 @@ function App() {
         </div>
       </footer>
 
-      {/* Floating Elements (Visible across all pages) */}
+
       <div className="floating-help">
         <button className="help-btn" onClick={() => openModal(t.helpDesk, t.modalTexts.help)}>
           <HeartHandshake size={24} />

@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --primary: #15803d; /* Authentic Gov Green */
+  --primary: #15803d;
   --primary-dark: #166534;
   --primary-light: #dcfce7;
-  --secondary: #ea580c; /* Saffron Accent */
+  --secondary: #ea580c;
   --background: #f8fafc;
   --surface: #ffffff;
   --text-main: #0f172a;
   --text-muted: #475569;
-  --radius: 8px; /* More formal, less rounded */
+  --radius: 8px;
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --transition: 0.2s ease-in-out;
@@ -63,7 +63,7 @@ body {
   line-height: 1.6;
 }
 
-/* Gov Topbar */
+
 .gov-topbar {
   background: #1e293b;
   color: #f8fafc;
@@ -134,7 +134,7 @@ body {
 .hc-circle.white { background: white; border-radius: 0 8px 8px 0; }
 body.high-contrast .high-contrast-btn.active { border-color: var(--primary); box-shadow: 0 0 5px var(--primary); }
 
-/* News Ticker */
+
 .news-ticker {
   display: flex;
   background: var(--primary-light);
@@ -159,7 +159,7 @@ body.high-contrast .high-contrast-btn.active { border-color: var(--primary); box
   color: var(--primary-dark);
 }
 
-/* Header */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -246,7 +246,7 @@ body.high-contrast .high-contrast-btn.active { border-color: var(--primary); box
   color: var(--text-main);
 }
 
-/* Hero Section */
+
 .hero {
   position: relative;
   min-height: 85vh;
@@ -374,7 +374,7 @@ body.high-contrast .high-contrast-btn.active { border-color: var(--primary); box
   gap: 1rem;
 }
 
-/* Stats Section */
+
 .stats-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -423,7 +423,7 @@ body.high-contrast .high-contrast-btn.active { border-color: var(--primary); box
   font-size: 0.95rem;
 }
 
-/* Quick Services */
+
 .quick-services {
   padding: 2rem 5%;
   max-width: 1200px;
@@ -476,7 +476,7 @@ body.high-contrast .high-contrast-btn.active { border-color: var(--primary); box
   transform: scale(1.1) rotate(5deg);
 }
 
-/* Village Widgets */
+
 .village-widgets {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -550,7 +550,7 @@ body.high-contrast .high-contrast-btn.active { border-color: var(--primary); box
 .weather-forecast span { font-size: 0.8rem; color: var(--primary-dark); }
 .weather-forecast strong { font-size: 1.1rem; color: var(--text-main); }
 
-/* Features Categories */
+
 .section-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -649,7 +649,7 @@ body.high-contrast .high-contrast-btn.active { border-color: var(--primary); box
   line-height: 1.6;
 }
 
-/* Thoughtful Message */
+
 .thoughtful-message {
   padding: 5rem 5%;
   background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5, 150, 105, 0.05) 100%);
@@ -699,7 +699,7 @@ body.high-contrast .high-contrast-btn.active { border-color: var(--primary); box
   color: var(--primary);
 }
 
-/* Floating Help */
+
 .floating-help {
   position: fixed;
   bottom: 2rem;
@@ -751,7 +751,7 @@ body.high-contrast .high-contrast-btn.active { border-color: var(--primary); box
   margin-left: 0.75rem;
 }
 
-/* Digital Identity Section */
+
 .digital-identity {
   padding: 6rem 5%;
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
@@ -861,7 +861,7 @@ body.high-contrast .high-contrast-btn.active { border-color: var(--primary); box
   display: block;
 }
 
-/* Social Media Wall */
+
 .social-wall {
   padding: 5rem 5%;
   max-width: 1200px;
@@ -953,7 +953,7 @@ body.high-contrast .high-contrast-btn.active { border-color: var(--primary); box
   font-weight: 500;
 }
 
-/* Modal */
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -1043,7 +1043,7 @@ body.high-contrast .high-contrast-btn.active { border-color: var(--primary); box
   }
 }
 
-/* Footer */
+
 footer {
   background: #0f172a;
   color: white;
@@ -1121,7 +1121,7 @@ footer {
   margin: 0 auto;
 }
 
-/* Subpages */
+
 .page-container {
   padding: 2rem 5% 4rem;
   max-width: 1200px;
@@ -1230,7 +1230,7 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .news-ticker {
     flex-direction: column;
@@ -1250,7 +1250,7 @@ footer {
     text-align: center;
   }
   .gov-right {
-    display: none; /* Hide complex topbar items on mobile */
+    display: none;
   }
   .emblem {
     height: 36px;
@@ -1272,7 +1272,7 @@ footer {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     
-    /* Animation state */
+
     opacity: 0;
     transform: translateY(-10px);
     pointer-events: none;
@@ -1323,7 +1323,7 @@ footer {
     padding: 2rem;
   }
 
-  /* Subpages Mobile Tweaks */
+
   .form-card {
     padding: 1.5rem;
   }
